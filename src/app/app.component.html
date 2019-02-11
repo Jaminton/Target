@@ -1,0 +1,82 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list lines="none" color ="secondary">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" color="light ">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+
+
+
+          </ion-menu-toggle>
+
+         <!--
+        <ion-item color="none" menuClose="" on-click="goToCampaAs()">
+          <ion-icon name="logo-buffer"></ion-icon>
+          <ion-label>
+            Campañas
+          </ion-label>
+
+          </ion-item>
+          <ion-item color="none" menuClose="" on-click="goToTarjetones()" id="menu-list-item6">
+            <ion-icon name="grid"></ion-icon>
+            Mis Tarjetones
+          </ion-item>
+          <ion-item color="none" menuClose="" on-click="goToMisCupones()" id="menu-list-item4">
+            <ion-icon name="images"></ion-icon>
+            Mis Cupones
+          </ion-item>
+          <ion-item-sliding>
+            <ion-item color="none" menuClose="" on-click="goToCalificar" id="menu-list-item5">
+              <ion-icon name="unlock"></ion-icon>
+              Canjear Codigo
+            </ion-item>
+            <ion-item-options side="left">
+              <button ion-button color="positive"></button>
+            </ion-item-options>
+          </ion-item-sliding>
+          <ion-item-sliding>
+            <ion-item color="none" menuClose="" on-click="goToCalificar()" id="menu-list-item11">
+              <ion-icon name="checkmark"></ion-icon>
+              Calificar
+            </ion-item>
+            <ion-item-options side="left">
+              <button ion-button color="positive"></button>
+            </ion-item-options>
+          </ion-item-sliding>
+          <ion-item-sliding>
+            <ion-item color="none" menuClose="" on-click="goToPQRS()" id="menu-list-item12">
+              <ion-icon name="call"></ion-icon>
+              PQRS
+            </ion-item>
+            <ion-item-options side="left">
+              <button ion-button color="positive"></button>
+            </ion-item-options>
+          </ion-item-sliding>
+          <ion-item-sliding>
+            <ion-item color="none" menuClose="" on-click="goToCompras()" id="menu-list-item20">
+              <ion-icon name="cart"></ion-icon>
+              Compras
+            </ion-item>
+            <ion-item-options side="left">
+              <button ion-button color="positive"></button>
+            </ion-item-options>
+          </ion-item-sliding>
+
+        -->
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

@@ -1,0 +1,8 @@
+{
+  "name": "Target",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "34d20ba3"
+}
