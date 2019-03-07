@@ -1,9 +1,35 @@
 <ion-header>
   <ion-toolbar color ="primary">
     <ion-title>pqrs</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/">
+        </ion-back-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
 
-    <ion-content padding id="page6"></ion-content>
+    <ion-content padding id="page6">
+
+      <ion-fab vertical="center" horizontal="center" slot="fixed">
+        <ion-fab-button>
+          <ion-icon name="share"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+          <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="bottom">
+          <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="start">
+          <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="end">
+          <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </ion-content>
+
+
+    </ion-content>

@@ -1,9 +1,47 @@
 <ion-header>
   <ion-toolbar color ="primary">
     <ion-title>compras</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/">
+        </ion-back-button>
+      </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+
+  <!-- Inputs with labels -->
+ <ion-item>
+    <ion-label position="floating">Codigo Asesor</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item>
+      <ion-label position="floating"> Cantidad</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  
+    <ion-item>
+        <ion-label position="floating">Costo Unidad</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+  
+      <ion-item>
+          <ion-label position="floating">Sub Total</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+  
+        <ion-item>
+            <ion-label position="floating">Total Compra</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          
+          <!-- Disabled and readonly textarea in an item with a stacked label -->
+<!-- Round -->
+<ion-button  expand="full" color="success" shape="round">Continuar Comprando</ion-button>
+
+<!-- Round -->
+<ion-button    expand="full" color="danger" shape="round">Cancelar compra</ion-button>
 
     <ion-content padding id="page7"></ion-content>

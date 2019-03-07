@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -16,30 +17,31 @@ import { CuponesPage } from './cupones/cupones.page';
 import { CanjearcodigoPage } from './canjearcodigo/canjearcodigo.page';
 import { PqrsPage } from './pqrs/pqrs.page';
 import { ComprasPage } from './compras/compras.page';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
 @NgModule({
   declarations: [AppComponent
- 
-   
-
-  ],
+ ],
   entryComponents: [],
   imports: [
+    NgxQRCodeModule,
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
-    
-
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
+    BarcodeScanner,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+   
   ],
   bootstrap: [AppComponent
-  
-    
-  
+
+
   ]
 })
 export class AppModule { }

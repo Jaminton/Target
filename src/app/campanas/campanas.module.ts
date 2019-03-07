@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { CampanasPage } from './campanas.page';
+import { Component } from '@angular/core';
 
 const routes: Routes = [
   {

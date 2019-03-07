@@ -1,34 +1,65 @@
 <ion-header>
-  <ion-toolbar color ="primary" >
+  <ion-toolbar color="primary">
     <ion-title>Campañas</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/">
+      </ion-back-button>
+    </ion-buttons>
+
   </ion-toolbar>
+
+
 </ion-header>
 
 <ion-content padding>
 
-    <ion-list>
-        <ion-item *ngFor="let item of items">
-          <ion-thumbnail slot="start">
-            <ion-img [src]="item.src"></ion-img>
-          </ion-thumbnail>
-          <ion-label>{{item.text}}</ion-label>
-        </ion-item>
-      </ion-list>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-thumbnail slot="start">
+        <ion-img [src]="item.src"></ion-img>
+      </ion-thumbnail>
+      <ion-label>{{item.text}}</ion-label>
+    </ion-item>
+  </ion-list>
 
 
-    <ion-content padding id="page1">
+  <ion-content padding id="page1">
 
-      <ion-slides>
-        <ion-slide><ion-img src="../assets/imgs/burger.jpg"></ion-img></ion-slide>
-        <ion-slide><ion-img src="../assets/imgs/carne.jpg"></ion-img></ion-slide>
-        <ion-slide><ion-img src="../assets/imgs/hambueguesas.jpg"></ion-img></ion-slide>
-        <ion-slide><ion-img src="../assets/imgs/parrilla.jpg"></ion-img></ion-slide>
-        <ion-slide><ion-img src="../assets/imgs/platanos.jpg"></ion-img></ion-slide>
-        <ion-slide><ion-img src="../assets/imgs/royal.jpg"></ion-img></ion-slide>
-        <ion-slide><ion-img src="../assets/imgs/juegos.jpg"></ion-img></ion-slide>
-      </ion-slides>
+    <ion-slides>
+      <ion-slide>
+        <ion-img src="../assets/imgs/burger.jpg"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="../assets/imgs/carne.jpg"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="../assets/imgs/hambueguesas.jpg"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="../assets/imgs/parrilla.jpg"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="../assets/imgs/platanos.jpg"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img width="80" height="80" routerLink="/tarjetones" src="../assets/imgs/royal.jpg"></ion-img>
+       <!--  <ion-button expand="block" color="success" shape="round" routerLink="/tarjetones">Ver Tarjeton</ion-button>
+        <ion-button expand="block" color="success" shape="round" routerLink="/tarjetones">Ver Tarjeton</ion-button>
+-->
+       
 
 
-    </ion-content>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="../assets/imgs/juegos.jpg"></ion-img>
+      </ion-slide>
+    </ion-slides>
+    <!-- 
+    <ion-button expand="full" color="success" shape="round" routerLink="/tarjetones">Ver Tarjeton</ion-button>
 
+    
+    <ion-button expand="full" color="danger" shape="round" routerLink="/compras">Comprar</ion-button>
+ -->
 
+  </ion-content>
