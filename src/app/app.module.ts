@@ -10,16 +10,14 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CalificarPageModule } from './calificar/calificar.module';
-import { CampanasPage } from './campanas/campanas.page';
-import { TarjetonesPage } from './tarjetones/tarjetones.page';
-import { CuponesPage } from './cupones/cupones.page';
-import { CanjearcodigoPage } from './canjearcodigo/canjearcodigo.page';
-import { PqrsPage } from './pqrs/pqrs.page';
-import { ComprasPage } from './compras/compras.page';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
-import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+
+import { firebaseConfig } from 'src/environments/environment';
+
+import{ AngularFireAuthModule } from "@angular/fire/auth";
+import{ AngularFireModule } from "@angular/fire";
+
 
 @NgModule({
   declarations: [AppComponent
@@ -30,9 +28,12 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
     FormsModule
   ],
   providers: [
+    
     BarcodeScanner,
     StatusBar,
     SplashScreen,

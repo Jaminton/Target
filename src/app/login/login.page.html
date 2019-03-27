@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color ="primary">
-    <ion-title>login</ion-title>
+    <ion-title text-center>login</ion-title>
     <ion-buttons slot="start">
         <ion-back-button defaultHref="/">
         </ion-back-button>
@@ -15,26 +15,18 @@
 
   <ion-card>
     <ion-img src="/assets/imgs/login_user.png"></ion-img>
-    <!--    <ion-card-header>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-          <ion-card-title>Card Title</ion-card-title>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Keep close to Nature's heart... and break clear away, once in awhile,
-          and climb a mountain or spend a week in the woods. Wash your spirit clean.
-        </ion-card-content>
-        -->
-
         <ion-item>
             <ion-label position="floating">Usuario Correo</ion-label>
-            <ion-input></ion-input>
+            <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
           </ion-item>
           
           <ion-item>
               <ion-label position="floating">Contraseña</ion-label>
-              <ion-input></ion-input>
+              <ion-input type="password" [(ngModel)]="password" name="password">  </ion-input>
             </ion-item>
+          <ion-button (click)="onSubmitLogin()" color="danger" expand="full">Entrar</ion-button>
+          <h3>email:  {{email}}</h3>
+          <h3>pass: {{password}}</h3>
   </ion-card>
 
 
