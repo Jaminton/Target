@@ -26,9 +26,11 @@
 
   <ion-content padding id="page1">
 
-    <ion-slides>
+    <ion-slides  #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" >
       <ion-slide>
         <ion-img src="../assets/imgs/burger.jpg"></ion-img>
+        <ion-label>+14</ion-label>
+        
       </ion-slide>
       <ion-slide>
         <ion-img src="../assets/imgs/carne.jpg"></ion-img>
@@ -43,7 +45,7 @@
         <ion-img src="../assets/imgs/platanos.jpg"></ion-img>
       </ion-slide>
       <ion-slide>
-        <ion-img width="80" height="80" routerLink="/tarjetones" src="../assets/imgs/royal.jpg"></ion-img>
+        <ion-img width="80" height="80" routerLink="/cupones" src="../assets/imgs/royal.jpg"></ion-img>
        <!--  <ion-button expand="block" color="success" shape="round" routerLink="/tarjetones">Ver Tarjeton</ion-button>
         <ion-button expand="block" color="success" shape="round" routerLink="/tarjetones">Ver Tarjeton</ion-button>
 -->
@@ -55,6 +57,10 @@
         <ion-img src="../assets/imgs/juegos.jpg"></ion-img>
       </ion-slide>
     </ion-slides>
+
+  
+
+    
     <!-- 
     <ion-button expand="full" color="success" shape="round" routerLink="/tarjetones">Ver Tarjeton</ion-button>
 

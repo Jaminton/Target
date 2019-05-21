@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>miscupones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item *ngFor = "let cudata of cupones" (click)="openCupon(cudata)"> 
+          <ion-avatar slot="start">
+              <ion-img src="https://picsum.photos/id/237/200/300"></ion-img>
+             
+          </ion-avatar>
+          <ion-label>
+            <h1>{{cudata.titulo}} </h1>
+              <h2> {{cudata.fecha.toDate() | date }}</h2>
+              <h3>{{cudata.estado}} </h3>
+                                  
+            </ion-label>
+          </ion-item>
+      </ion-list>
+
+</ion-content>

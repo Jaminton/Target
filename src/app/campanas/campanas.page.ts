@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewChild } from '@angular/core';
+import { IonSlides } from '@ionic/angular';
 
 
 @Component({
@@ -13,7 +15,20 @@ export class CampanasPage implements OnInit {
 
   ngOnInit() {
   }
+  @ViewChild('mySlider', { read: IonSlides }) slides: IonSlides;
 
+  ionViewDidEnter() {
+  this.slides.startAutoplay();
+  }
+
+  slidesDidLoad(slides: IonSlides) {
+    slides.startAutoplay();
+  }
+
+
+
+
+  
 
 
 }

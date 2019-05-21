@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+
 
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -17,12 +18,16 @@ import { firebaseConfig } from 'src/environments/environment';
 
 import{ AngularFireAuthModule } from "@angular/fire/auth";
 import{ AngularFireModule } from "@angular/fire";
+import { GoogleLogComponent } from './google-log/google-log.component';
+import { GooglePlus } from '@ionic-native/google-plus/ngx';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { CuponComponent } from './componentes/cupon/cupon.component';
 
 
 @NgModule({
-  declarations: [AppComponent
+  declarations: [AppComponent, GoogleLogComponent, CuponComponent
  ],
-  entryComponents: [],
+  entryComponents: [CuponComponent],
   imports: [
     NgxQRCodeModule,
     BrowserModule,
@@ -30,10 +35,15 @@ import{ AngularFireModule } from "@angular/fire";
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
+    AngularFirestoreModule,
     FormsModule
+    
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   providers: [
-    
+    GooglePlus,
     BarcodeScanner,
     StatusBar,
     SplashScreen,
@@ -44,5 +54,7 @@ import{ AngularFireModule } from "@angular/fire";
 
 
   ]
+ 
 })
 export class AppModule { }
+

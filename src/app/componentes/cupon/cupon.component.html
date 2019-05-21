@@ -1,0 +1,34 @@
+<ionic-header>
+<ion-toolbar ></ion-toolbar>
+<ion-title>{{titulo}}</ion-title>
+
+
+</ionic-header>
+
+
+
+<ion-content>
+<ion-card>
+  <ion-img src="/assets/imgs/ca.png"></ion-img>
+  <ion-card-header>
+    <ion-card-subtitle>{{titulo}}</ion-card-subtitle>
+    <ion-card-title>{{estado}}</ion-card-title>
+    <ion-card-title>{{fecha.toDate() | date}}</ion-card-title>
+
+  </ion-card-header>
+  <ion-item class="activated">
+    <ion-icon name="warning" slot="start"></ion-icon>
+    <ion-label>Activo</ion-label>
+  </ion-item>
+  <div class="example-center">
+    <ion-button slot="start" name="star" size="large" expand="block" fill="solid" color="success" shape="round" (click)="encodedText()"  >
+      Generar Cupon</ion-button>
+      <ion-button slot="start" name="star" size="large" expand="block" fill="solid" color="success" shape="round" (click)="closeCupon()"  >
+      </ion-button>
+
+  </div>
+  <ion-item>
+  </ion-item>
+
+</ion-card>
+</ion-content>

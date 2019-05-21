@@ -5,14 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CampanasPage } from './campanas.page';
-import { Component } from '@angular/core';
-//import { Slides } from '@ionic/angular';
+import { GmailPage } from './gmail.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: CampanasPage
+    component: GmailPage
   }
 ];
 
@@ -23,15 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CampanasPage]
+  declarations: [GmailPage]
 })
-export class CampanasPageModule {
-
-
-  slideOpts = {
-    initialSlide: 1,
-    speed: 400
-  };
-
-
-}
+export class GmailPageModule {}

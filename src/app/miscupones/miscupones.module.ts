@@ -3,16 +3,15 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
+
 import { IonicModule } from '@ionic/angular';
 
-import { CampanasPage } from './campanas.page';
-import { Component } from '@angular/core';
-//import { Slides } from '@ionic/angular';
+import { MiscuponesPage } from './miscupones.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: CampanasPage
+    component: MiscuponesPage
   }
 ];
 
@@ -23,15 +22,12 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CampanasPage]
+  declarations: [MiscuponesPage]
 })
-export class CampanasPageModule {
+export class MiscuponesPageModule {
 
 
-  slideOpts = {
-    initialSlide: 1,
-    speed: 400
-  };
+
 
 
 }
